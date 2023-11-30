@@ -29,9 +29,7 @@ class MdCheckbox extends AbstractPicoPlugin
      */
     private function replace_md_checkboxes(&$markdown)
     {
-        // replace - [ ] with <input type="checkbox" disabled>
         $markdown = preg_replace('/- \[ \]/s', '- <input type="checkbox" />', $markdown);
-        // replace - [x] with <input type="checkbox" disabled checked>
         $markdown = preg_replace('/- \[x\]/s', '- <input type="checkbox" checked />', $markdown);
     }
 }
